@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   useGetCsrfTokenQuery,
   useGetAuthWealthsimpleMutation,
-} from "../../Redux/rtkquery/auth";
+} from "../Redux/rtkquery/auth";
 import {
   setCsrfToken,
   setAuthWealthsimple,
-} from "../../Redux/slices/authSlice";
-import WealthsimpleAuthModal from "../Modals/WealthsimpleAuthModal";
-import LandingPage from "../Pages/Homepage";
+} from "../Redux/slices/authSlice";
+import WealthsimpleAuthModal from "../components/Modals/WealthsimpleAuthModal";
+import LandingPage from "../components/Pages/HomePage";
 
 const AuthWrapper = () => {
   const dispatch = useDispatch();

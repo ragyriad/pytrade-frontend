@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { Grid, Button, Paper } from "@mui/material";
-import { API_URLS } from "../../config";
 
 const UpdatePage = ({ handleAuthSubmit }) => {
   const [loading, setLoading] = useState(false);
@@ -19,7 +18,7 @@ const UpdatePage = ({ handleAuthSubmit }) => {
       };
       const response = await axios({
         method: "POST",
-        url: `${API_URLS.PROD_BASE + API_URLS.WS + API_URLS.ACTIVITY}`,
+        url: `${env.API_URLS.PROD_BASE + env.API_URLS.WS + env.API_URLS.ACTIVITY}`,
         headers: {
           "X-CSRFToken": csrfToken,
         },
